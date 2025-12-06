@@ -40,7 +40,7 @@ const PokemonCard = ({ id, name, sprites, types }: Props) => {
   return (
     <Trail open={true}>
       <div
-        className="w-full rounded-lg overflow-hidden shadow-lg mx-auto cursor-pointer hover:shadow-2xl transition-all duration-200 ease-in-out transform hover:-translate-y-2"
+        className="w-full rounded-full overflow-hidden shadow-lg mx-auto cursor-pointer hover:shadow-2xl transition-all duration-200 ease-in-out transform hover:-translate-y-2"
         style={{
           backgroundColor: backgroundColors[0].medium,
         }}
@@ -77,7 +77,12 @@ const PokemonCard = ({ id, name, sprites, types }: Props) => {
           </div>
         </div>
 
-        <div className="bg-white w-full pt-5 pb-8 text-center">
+        <div
+          className="w-full pt-5 pb-8 text-center"
+          style={{
+            backgroundColor: backgroundColors[0].light,
+          }}
+        >
           <h1 className="capitalize font-semibold text-3xl mb-2">{name}</h1>
           <div className="flex flex-wrap mx-auto justify-center">
             {types.map(({ type }, index) => {
